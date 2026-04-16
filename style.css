@@ -1,0 +1,215 @@
+/* ===== 기본 ===== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background: #ffffff;
+  color: #111;
+}
+
+/* ===== 레이아웃 ===== */
+#wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 6rem;
+}
+
+/* ===== 헤더 ===== */
+.sub_cont_ttl {
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  margin-bottom: 2.5rem;
+  font-size: 28px;
+  font-weight: 600;
+  color: #111;
+  letter-spacing: -0.4px;
+
+  background: #f5f5f7;
+  border: 1px solid #e5e5e5;
+}
+
+/* ===== 탭 ===== */
+.sub_tabs_wrap {
+  margin-bottom: 2.5rem;
+}
+.sub_tabs_wrap ul {
+  display: flex;
+  gap: 6px;
+  list-style: none;
+}
+.sub_tabs_wrap ul li a {
+  display: block;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  color: #777;
+  text-decoration: none;
+  background: #f2f2f2;
+  transition: all 0.2s;
+}
+.sub_tabs_wrap ul li a:hover {
+  color: #111;
+}
+.sub_tabs_wrap ul li a.on {
+  background: #111;
+  color: #fff;
+}
+
+/* ===== 섹션 타이틀 ===== */
+.intro_cont_ttl {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 1rem;
+}
+.intro_cont_ttl::before {
+  content: '';
+  width: 3px;
+  height: 18px;
+  background: #111;
+}
+
+/* ===== 카드 ===== */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 2.5rem;
+}
+.stat-card {
+  background: #f7f7f7;
+  border-radius: 14px;
+  padding: 1.2rem;
+  border: 1px solid #e6e6e6;
+  transition: 0.25s;
+}
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+}
+.stat-card .lbl {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 6px;
+}
+.stat-card .val {
+  font-size: 22px;
+  font-weight: 600;
+  color: #111;
+}
+.stat-card .unit {
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* ===== 이미지 ===== */
+.intro_img_cont_wrap img,
+.by_hadid img,
+.const_story > img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 1.25rem;
+  border: 1px solid #e5e5e5;
+
+  transition: 0.4s;
+}
+.intro_img_cont_wrap img:hover,
+.by_hadid img:hover,
+.const_story > img:hover {
+  transform: scale(1.015);
+}
+
+/* ===== 텍스트 ===== */
+.intro_img_cont_txt {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #555;
+  margin-bottom: 3rem;
+}
+.intro_img_cont_txt strong {
+  display: block;
+  font-size: 17px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 0.5rem;
+}
+
+/* ===== 테이블 ===== */
+.est_summary_tbl table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin-bottom: 3rem;
+}
+.est_summary_tbl th,
+.est_summary_tbl td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.est_summary_tbl th {
+  width: 120px;
+  font-weight: 600;
+  color: #111;
+  background: #fafafa;
+}
+.est_summary_tbl td {
+  color: #555;
+}
+
+/* ===== 해시태그 ===== */
+.const_story_hashs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 2rem;
+}
+.const_story_hashs span {
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid #ddd;
+  color: #666;
+  background: #fafafa;
+}
+
+/* ===== 기술 카드 ===== */
+.const_tech_each {
+  padding: 1.4rem;
+  margin-bottom: 1rem;
+  border-radius: 14px;
+  background: #fafafa;
+  border: 1px solid #e5e5e5;
+  border-left: 3px solid #111;
+  transition: 0.25s;
+}
+.const_tech_each:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+}
+.const_tech_each strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 0.5rem;
+}
+.const_tech_each p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #666;
+}
+
+/* ===== 반응형 ===== */
+@media (max-width: 640px) {
+  .stat-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sub_cont_ttl {
+    font-size: 22px;
+  }
+}
